@@ -1,6 +1,6 @@
 import React from 'react'
 import ChatList from './ChatList/ChatList'
-import Chat from '../ChatApp/Chat/Chat'
+import Chat from './Chat/Chat'
 import '../../Styles/ChatStyles/ChatApp.css'
 
 

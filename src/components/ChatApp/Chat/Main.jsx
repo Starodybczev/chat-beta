@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from '../Chat/Header'
+import Header from './Header'
 import '../../../Styles/ChatStyles/Main.css'
 
 export default function Main() {
