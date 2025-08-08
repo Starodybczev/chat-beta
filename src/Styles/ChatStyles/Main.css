@@ -1,0 +1,6 @@
+.main{
+    display: flex;
+    flex-direction: row;
+    height: 85vh;
+    background-color: rgb(37, 37, 37);
+}

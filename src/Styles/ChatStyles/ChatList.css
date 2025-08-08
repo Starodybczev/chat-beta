@@ -1,0 +1,46 @@
+.chatList{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    background-color: rgb(97, 97, 97);
+}
+
+.block_user{
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    border: 2px solid black;
+    width: 300px;
+    padding: 20px;
+    cursor: pointer;
+}
+h2, h3{
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+
+}
+
+.chatUser{
+    display: flex;
+    align-items: center;
+    border: 2px solid black;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.profile{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: gray;
+    margin-right: 10px;
+}

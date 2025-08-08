@@ -1,0 +1,10 @@
+.chatContainer{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 80%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
