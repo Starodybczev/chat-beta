@@ -7,9 +7,7 @@ import Footer from './Footer'
 export default function () {
   return (
     <div className='chat'>
-        <Header/>
         <Main/>
-        <Footer/>
     </div>
   )
 }

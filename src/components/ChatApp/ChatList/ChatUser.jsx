@@ -5,6 +5,8 @@ import { db } from '../../../fireBase/fireBase';
 import { orderBy } from 'firebase/firestore';
 import '../../../Styles/ChatStyles/ChatList.css'
 
+
+
 export default function ChatUser() {
     const [userData, setUserData] = useState([]);
 
@@ -35,13 +37,12 @@ const getData = async () => {
 
 
 
-
+  //? map
   return (
-    <div>
-        <h3>Chat User</h3>
+    <div >
         {userData.map(({id, ownerEmail,  }) => (
             <div className='chatUser' key={id}>
-              <div className='profile'></div>
+              <img className='profile' src="/images/icon_message.webp" alt="message icon" />
                 <h4>{ownerEmail}</h4>
               </div>  
           ))}
