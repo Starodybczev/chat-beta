@@ -2,10 +2,14 @@
     display: flex;
     flex-direction: row;
     height: 100vh;
+    margin-left: 180px;
+    
     background: radial-gradient(circle at center, #3b3b3b 0%, #3c3c3c 40%, #202020 100%);
 
     position: relative;
 }   
+
+
 
 .chatFooter{
     position: absolute;
@@ -14,4 +18,205 @@
     padding: 10px;
     display: flex;
     justify-content: center;
+}
+
+.chatForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    padding: 20px 0;
+
+}
+
+input {
+    height: 60px;
+    padding: 0 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #3c3c3c;
+    color: #fff;
+
+    &:hover {
+        background-color: #4c4c4c;
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 5px #202020;
+    }
+}
+
+.emojiButton {
+    background: none;
+    border: none;
+    color: #bbb;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"><path fill="%23FFFFFF" stroke="%23000000" stroke-width="2.75" stroke-linejoin="round" d="M10 11V8.99c0-.88.59-1.64 1.44-1.86h.05A1.99 1.99 0 0 1 14 9.05V12v-2c0-.88.6-1.65 1.46-1.87h.05A1.98 1.98 0 0 1 18 10.06V13v-1.94a2 2 0 0 1 1.51-1.94h0A2 2 0 0 1 22 11.06V14c0 .6-.08 1.27-.21 1.97a7.96 7.96 0 0 1-7.55 6.48 54.98 54.98 0 0 1-4.48 0 7.96 7.96 0 0 1-7.55-6.48C2.08 15.27 2 14.59 2 14v-1.49c0-1.11.9-2.01 2.01-2.01h0a2 2 0 0 1 2.01 2.03l-.01.97v-10c0-1.1.9-2 2-2h0a2 2 0 0 1 2 2V11Z"></path></svg>') 16 16, auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s;
+
+}
+
+.message-bubble {
+    display: inline-block;
+    max-width: 70%;
+    /* ограничим ширину */
+    padding: 6px 15px;
+    border-radius: 8px;
+    color: white;
+    word-wrap: break-word;
+    margin: 5px 0;
+}
+
+.message-bubble.sent {
+    background-color: #154d08;
+    /* мои сообщения */
+    align-self: flex-end;
+    /* вправо */
+}
+
+.message-bubble.received {
+    background-color: #242626;
+    /* чужие сообщения */
+    align-self: flex-start;
+    /* влево */
+}
+
+.message-sender {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.message-text {
+    margin: 4px 0;
+}
+
+.message-time {
+    font-size: 10px;
+    color: #aaa;
+    margin-top: 6px;
+    text-align: right;
+}
+
+.emojiButton:hover {
+    color: white;
+}
+
+.messagesContainer{
+    animation: appearance 0.7s; 
+    
+    
+}
+
+@keyframes appearance{
+    from{
+        opacity: 0;
+        transform: translate(-50px, -0px);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0px , 0px);
+    }
+}
+
+.menuBar{
+    margin: 0;
+    padding: 0;
+    height: 75vh;
+    width: 40px;
+    background-color: #202020;
+    padding: 35px 10px;
+    border-radius: 10px;
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    
+
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.iconBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    border-radius: 12px;
+    color: #d1d5db;
+    background: transparent;
+    transition: color .2s ease, background-color .2s ease, transform .08s ease;
+}
+
+.iconBtn:hover {
+    color: #fff;
+    background: #111827;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"><path fill="%23FFFFFF" stroke="%23000000" stroke-width="2.75" stroke-linejoin="round" d="M10 11V8.99c0-.88.59-1.64 1.44-1.86h.05A1.99 1.99 0 0 1 14 9.05V12v-2c0-.88.6-1.65 1.46-1.87h.05A1.98 1.98 0 0 1 18 10.06V13v-1.94a2 2 0 0 1 1.51-1.94h0A2 2 0 0 1 22 11.06V14c0 .6-.08 1.27-.21 1.97a7.96 7.96 0 0 1-7.55 6.48 54.98 54.98 0 0 1-4.48 0 7.96 7.96 0 0 1-7.55-6.48C2.08 15.27 2 14.59 2 14v-1.49c0-1.11.9-2.01 2.01-2.01h0a2 2 0 0 1 2.01 2.03l-.01.97v-10c0-1.1.9-2 2-2h0a2 2 0 0 1 2 2V11Z"></path></svg>') 16 16, auto;
+}
+
+.iconBtn:active {
+    transform: scale(0.96);
+}
+
+.iconBtn:focus-visible {
+    outline: 2px solid #6366f1;
+    outline-offset: 2px;
+    border-radius: 14px;
+}
+
+.userChoose{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+}
+
+@media(max-width: 768px) and (max-height: 1218px) {
+    h2{
+        font-size: 15px;
+    }
+
+    .userChoose {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+
+    .main{
+        margin-left: 250px;
+    }
+
+    .message-bubble{
+            max-width: 40%;
+            padding: 3px 10px;
+            max-height: 20%;
+    }
+}
+
+.modalGroup {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    max-width: 300px;
+
+    max-height: 50px;
+
+    overflow: hidden;
+
+    font-size: 20px;
+}
+
+.checked{
+    width: 30px;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+
 }

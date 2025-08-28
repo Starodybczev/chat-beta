@@ -1,20 +1,3 @@
 
 
-.chatForm{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 90%;
-    padding: 20px;
-
-}
-
-input{
-    height: 60px;
-    padding: 0 10px;
-    border-radius: 10px;
-    border: none;
-    background-color: #3c3c3c;
-    color: #fff;
-}
 

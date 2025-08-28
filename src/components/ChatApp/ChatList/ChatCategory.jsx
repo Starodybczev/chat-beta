@@ -1,15 +1,20 @@
-import React, { useState } from 'react'
-import '../../../Styles/ChatStyles/ChatCategory.css'
+import React from "react";
+import "../../../Styles/ChatStyles/ChatCategory.css";
 
-export default function ChatCategory() {
-    const [searchTerm, setSearchTerm] = useState('');
-
-    const SearchChat =  async(e) => {
-    e.preventDefault();
-    }
+export default function ChatCategory({
+  selectedUser,
+  user,
+  setSearchName,
+  searchName,
+}) {
   return (
-    <form className='chatCategory' onSubmit={SearchChat}>
-        <input type="text" placeholder="Search chats" onChange={(e) => setSearchTerm(e.target.value)}/>
-    </form>
-  )
+    <div className="chatCategory">
+      <input
+        type="text"
+        placeholder="Search chats"
+        value={searchName}
+        onChange={(e) => setSearchName(e.target.value)}
+      />
+    </div>
+  );
 }

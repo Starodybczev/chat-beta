@@ -1,13 +1,11 @@
-import React from 'react'
-import Header from './Header'
-import '../../../Styles/ChatStyles/Header.css'
-import Main from './Main'
-import Footer from './Footer'
+import React from "react";
+import "../../../Styles/ChatStyles/Header.css";
+import Main from "./Main";
 
-export default function () {
+export default function Chat({ selectedUser, setSelectedUser }) {
   return (
-    <div className='chat'>
-        <Main/>
+    <div className="chat">
+      <Main selectedUser={selectedUser} setSelectedUser={setSelectedUser} />
     </div>
-  )
+  );
 }

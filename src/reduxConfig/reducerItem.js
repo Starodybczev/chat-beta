@@ -6,6 +6,7 @@
 const initialState = {
 
   isActiveUser: {},
+  SelectedUserId: null,
 
 
 
@@ -51,6 +52,12 @@ const itemReducer = (state = initialState, action) => {
         ...state,
         Category: action.payload
       };
+    case "SELECTED_USER":
+      return{
+        ...state,
+        SelectedUserId: action.payload
+      }
+
     case "CHECK_VALUE":
       console.log(state.users);
     default:

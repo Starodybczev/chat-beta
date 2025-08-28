@@ -1,0 +1,41 @@
+.modal {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* убрал transform отсюда */
+    opacity: 0;
+    /* плавное появление */
+    pointer-events: none;
+    /* чтобы не кликалось в неактивном */
+    transition: opacity 0.3s ease;
+}
+
+.modal.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal__content {
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #383838;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    width: 600px;
+    height: 800px;
+    transition: transform 0.4s ease;
+}
+
+.modal__content.active {
+    transform: translate(-50%, -50%) scale(1);
+}

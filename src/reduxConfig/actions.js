@@ -30,6 +30,13 @@ export const Category = (id, name) => ({
   payload: {id, name}
 });
 
+export const SelectedUser = (item) => ({
+  type: "SELECTED_USER",
+  payload: item
+});
+
+
+
 // export const deleteUser = (index) => ({
 //     type: "DELETE_USER",
 //     payload: index,
